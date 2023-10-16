@@ -33,5 +33,10 @@ RSpec.describe Payment, type: :model do
 
       expect(payment).to_not be_valid
     end
+
+    it 'a payment transaction should not be valid if the amount is less than 0' do
+      payment.amount = -3.90
+      expect(payment).to_not be_valid
+    end
   end
 end
