@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!, only: %i[index]
-  def index
-  end
+  def index; end
 end

@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "attributes" do
+  describe 'attributes' do
     it 'name should have a correct value' do
       expect(user.name).to eq('James Williams')
     end
