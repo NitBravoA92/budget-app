@@ -13,4 +13,12 @@ RSpec.describe Category, type: :model do
       expect(category.user.name).to eq('James Williams')
     end
   end
+
+  describe 'attributes validation' do
+    it 'a category should not be valid without a name' do
+      category.name = nil
+
+      expect(category).to_not be_valid
+    end
+  end
 end
