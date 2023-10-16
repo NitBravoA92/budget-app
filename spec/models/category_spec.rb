@@ -7,5 +7,10 @@ RSpec.describe Category, type: :model do
     it 'should be a valid instance of Category class' do
       expect(category).to be_a(Category)
     end
+
+    it 'should belong to a valid user' do
+      expect(category.user).to be_a(User)
+      expect(category.user.name).to eq('James Williams')
+    end
   end
 end
