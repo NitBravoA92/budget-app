@@ -1,7 +1,6 @@
 FactoryBot.define do
   factory :payment do
-    name { 'MyString' }
-    amount { '9.99' }
-    author { nil }
+    name { 'Purchase of Burger King burger' }
+    amount { 6.95 }
   end
 end
