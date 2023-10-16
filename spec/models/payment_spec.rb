@@ -21,5 +21,11 @@ RSpec.describe Payment, type: :model do
 
       expect(payment).to_not be_valid
     end
+
+    it 'a payment transaction should not be valid if the name has more than 255 characters' do
+      payment.name = 'Buy Lemon Candies' * 20
+
+      expect(payment).to_not be_valid
+    end
   end
 end
