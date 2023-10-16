@@ -19,5 +19,9 @@ RSpec.describe User, type: :model do
 
         expect(user.email).to eq(expected_result)
       end
+
+      it 'should have a password with a correct value' do
+        expect(user.password).to eq('james12345')
+      end
   end
 end
