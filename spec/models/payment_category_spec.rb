@@ -9,5 +9,9 @@ RSpec.describe PaymentCategory, type: :model do
     it 'should be a valid instance of PaymentCategory class' do
       expect(payment_category).to be_a(PaymentCategory)
     end
+
+    it 'should have a valid category' do
+      expect(payment_category.category).to be_a(Category)
+    end
   end
 end
