@@ -14,4 +14,12 @@ RSpec.describe Payment, type: :model do
       expect(payment.author.name).to eq('James Williams')
     end
   end
+
+  describe 'attributes validation' do
+    it 'a payment transaction should not be valid without a name' do
+      payment.name = nil
+
+      expect(payment).to_not be_valid
+    end
+  end
 end
