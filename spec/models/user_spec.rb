@@ -8,4 +8,10 @@ RSpec.describe User, type: :model do
       expect(user).to be_a(User)
     end
   end
+
+    describe "attributes" do
+    it 'should have a name with a correct value' do
+      expect(user.name).to eq('James Williams')
+    end
+  end
 end
