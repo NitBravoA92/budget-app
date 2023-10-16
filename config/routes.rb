@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  root 'welcome_pages#index'
+  devise_for :users
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root 'welcome_pages#index'
+
+  resources :categories, only: [:index]
+
 end
