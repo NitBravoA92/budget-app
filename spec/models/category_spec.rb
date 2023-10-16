@@ -21,6 +21,12 @@ RSpec.describe Category, type: :model do
       expect(category).to_not be_valid
     end
 
+    it 'a category should be valid if the name is less than or equal to 255' do
+      category.name = 'Fast Food' * 25
+
+      expect(category).to be_valid
+    end
+
     it 'a category should not be valid without an icon' do
       category.icon = nil
 
