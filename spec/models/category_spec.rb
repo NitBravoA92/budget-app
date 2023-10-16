@@ -20,5 +20,11 @@ RSpec.describe Category, type: :model do
 
       expect(category).to_not be_valid
     end
+
+    it 'a category should not be valid without an icon' do
+      category.icon = nil
+
+      expect(category).to_not be_valid
+    end
   end
 end
