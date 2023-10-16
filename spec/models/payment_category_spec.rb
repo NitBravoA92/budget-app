@@ -13,5 +13,9 @@ RSpec.describe PaymentCategory, type: :model do
     it 'should have a valid category' do
       expect(payment_category.category).to be_a(Category)
     end
+
+    it 'should have a valid payment' do
+      expect(payment_category.payment).to be_a(Payment)
+    end
   end
 end
