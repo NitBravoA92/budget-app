@@ -9,23 +9,28 @@ RSpec.describe User, type: :model do
     end
   end
 
-    describe "attributes" do
-      it 'name should have a correct value' do
-        expect(user.name).to eq('James Williams')
-      end
+  describe "attributes" do
+    it 'name should have a correct value' do
+      expect(user.name).to eq('James Williams')
+    end
 
-      it 'email should have a correct value' do
-        expected_result = "james_#{user.id}@mail.com"
+    it 'name should not be nil' do
+      user.name = nil
+      expect(user).to_not be_valid
+    end
 
-        expect(user.email).to eq(expected_result)
-      end
+    it 'email should have a correct value' do
+      expected_result = "james_#{user.id}@mail.com"
 
-      it 'password should have a correct value' do
-        expect(user.password).to eq('james12345')
-      end
+      expect(user.email).to eq(expected_result)
+    end
 
-      it 'confirmed_at should have a value different than nil' do
-        expect(user.confirmed_at).to_not eq(nil)
-      end
+    it 'password should have a correct value' do
+      expect(user.password).to eq('james12345')
+    end
+
+    it 'confirmed_at should have a value different than nil' do
+      expect(user.confirmed_at).to_not eq(nil)
+    end
   end
 end
