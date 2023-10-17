@@ -9,6 +9,12 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe 'associations' do
+    it 'should have many categories' do
+      expect(User.reflect_on_association(:categories).macro).to eq :has_many
+    end
+  end
+
   describe 'attributes' do
     it 'name should have a correct value' do
       expect(user.name).to eq('James Williams')
