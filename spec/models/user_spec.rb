@@ -13,6 +13,10 @@ RSpec.describe User, type: :model do
     it 'should have many categories' do
       expect(User.reflect_on_association(:categories).macro).to eq :has_many
     end
+
+    it 'should have many payments' do
+      expect(User.reflect_on_association(:payments).macro).to eq :has_many
+    end
   end
 
   describe 'attributes' do
