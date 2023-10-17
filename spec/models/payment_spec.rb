@@ -19,6 +19,10 @@ RSpec.describe Payment, type: :model do
     it 'should have or belongs to many categories' do
       expect(Payment.reflect_on_association(:categories).macro).to eq :has_and_belongs_to_many
     end
+
+    it 'should belongs to an author(user)' do
+      expect(Payment.reflect_on_association(:author).macro).to eq :belongs_to
+    end
   end
 
   describe 'attributes validation' do
