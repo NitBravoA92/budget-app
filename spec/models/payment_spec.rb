@@ -15,6 +15,12 @@ RSpec.describe Payment, type: :model do
     end
   end
 
+  describe 'associations' do
+    it 'should have or belongs to many categories' do
+      expect(Payment.reflect_on_association(:categories).macro).to eq :has_and_belongs_to_many
+    end
+  end
+
   describe 'attributes validation' do
     it 'a payment transaction should not be valid without a name' do
       payment.name = nil
