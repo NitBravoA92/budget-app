@@ -1,16 +1,15 @@
-<section class="page" id="splash-screen">
-  <div class="container">
-    <div class="content-row">
-      <%= image_tag 'app-logo.png', class: 'logo-app' %>
-      <h1 class="text-3xl font-bold underline">YouPayment</h1>
+<section class="w-full h-screen bg-zinc-50" id="splash-screen">
+  <div class="container mx-auto h-full flex flex-col justify-center items-center px-4">
+    <div class="content-row w-full h-3/4 flex flex-col justify-center">
+      <h1 class="text-5xl md:text-7xl lg:text-9xl font-normal w-full text-center text-text_color font-pacific">YouPayment</h1>
     </div>
     <% unless user_signed_in? %>
-      <div class="content-row" id="session-links">
-        <div class="full-button">
-          <%= link_to 'Log In', new_user_session_path, class: 'btn-primary' %>
+      <div class="content-row h-1/4 flex flex-col lg:flex-row justify-end items-center gap-2 w-full py-4" id="session-links">
+        <div class="full-button w-full">
+          <%= link_to 'Log In', new_user_session_path, class: 'w-full p-5 inline-block bg-main-400 text-white text-center uppercase transition-colors duration-300 ease-in-out hover:bg-main-700' %>
         </div>
-        <div class="full-button">
-          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn-default' %>
+        <div class="full-button w-full">
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'w-full p-5 inline-block text-center uppercase text-zinc-400 uppercase transition-colors duration-300 ease-in-out hover:bg-zinc-200 hover:text-text_color' %>
         </div>
       </div>
     <% end %>
