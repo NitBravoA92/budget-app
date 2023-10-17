@@ -18,4 +18,10 @@ RSpec.describe PaymentCategory, type: :model do
       expect(payment_category.payment).to be_a(Payment)
     end
   end
+
+  describe 'associations' do
+    it 'should belong to a category' do
+      expect(PaymentCategory.reflect_on_association(:category).macro).to eq :belongs_to
+    end
+  end
 end
