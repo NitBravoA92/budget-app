@@ -1,7 +1,14 @@
-<section class="w-full h-screen bg-zinc-200" id="categories">
-  <div class="container mx-auto h-full flex flex-col px-4">
+<section class="w-full h-screen bg-zinc-200 flex flex-col justify-between" id="categories">
+  <div class="container mx-auto h-5/6 flex flex-col px-4">
     <div class="content-row w-full py-6 flex flex-col items-center gap-4" id="categories-list">
       <%= render partial: 'partials/category', collection: @categories %>
+    </div>
+  </div>
+  <div class="container mx-auto h-1/6">
+    <div class="content-row w-full">
+      <div class="full-button w-full">
+          <%= link_to 'Add a new category', new_category_path, class: 'w-full p-5 inline-block bg-secondary opacity-100 text-white text-center uppercase transition-opacity duration-300 ease-in-out hover:opacity-70' %>
+        </div>
     </div>
   </div>
 </section>
