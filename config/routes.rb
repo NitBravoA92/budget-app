@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'welcome_pages#index'
 
-  resources :categories, only: [:index] do
+  resources :categories, only: [:index, :new, :create] do
     resources :payments, only: [:index]
   end
 
