@@ -21,7 +21,7 @@ module.exports = {
           800: '#054690',
           900: '#00418b',
         },
-        'second': '#5fb523',
+        'secondary': '#5fb523',
         'text_color': '#434b54',
       },
     },
