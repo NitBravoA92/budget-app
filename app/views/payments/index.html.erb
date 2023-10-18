@@ -1,2 +1,14 @@
-<h1>Payments#index</h1>
-<p>Find me in app/views/payments/index.html.erb</p>
+<section class="w-full h-screen bg-zinc-200 flex flex-col justify-between" id="payments">
+  <div class="container mx-auto h-5/6 flex flex-col px-4">
+    <div class="content-row w-full py-6 flex flex-col items-center gap-4" id="payments-list">
+      <%= render partial: 'partials/payment', collection: @payments %>
+    </div>
+  </div>
+  <div class="container mx-auto h-1/6">
+    <div class="content-row w-full">
+      <div class="full-button w-full">
+          <%= link_to 'Add a new transaction', new_payment_path, class: 'w-full p-5 inline-block bg-secondary opacity-100 text-white text-center uppercase transition-opacity duration-300 ease-in-out hover:opacity-70' %>
+        </div>
+    </div>
+  </div>
+</section>
