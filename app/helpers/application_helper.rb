@@ -1,4 +1,26 @@
 module ApplicationHelper
+  def generate_navigation
+    content = ''
+    return if controller_name == 'welcome_pages'
+    sign_out = user_signed_in? ? "#{link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete } }" : ''
+
+    navbar = "<nav class='w-full bg-main-700'>
+      <div class='container mx-auto py-6 px-4'>
+        <ul class='w-full flex justify-between items-center gap-2 text-lg'>
+          <li class='w-1/6 text-white'>
+            #{generate_navbar_data['back'] unless generate_navbar_data.nil?}
+          </li>
+          <li class='w-3/6 text-white text-semibold uppercase text-center'>
+            #{generate_navbar_data['title'] unless generate_navbar_data.nil?}
+          </li>
+          <li class='w-2/6 text-white text-right'>#{sign_out}</li>
+        </ul>
+      </div>
+    </nav>"
+    content << navbar
+    content.html_safe
+  end
+
   def generate_navbar_data
     sessions = generate_devise_links
     generals = generate_general_links
