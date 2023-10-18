@@ -1,4 +1,11 @@
 module ApplicationHelper
+  def generate_navbar_data
+    sessions = generate_devise_links
+    generals = generate_general_links
+    header = sessions.merge(generals)
+    header[controller_name][action_name]
+  end
+
   def generate_devise_links
     btn_back = 'B'
     session_data = {
