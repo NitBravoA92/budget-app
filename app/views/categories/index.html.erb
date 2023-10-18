@@ -1,2 +1,7 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<section class="w-full h-screen bg-zinc-200" id="categories">
+  <div class="container mx-auto h-full flex flex-col px-4">
+    <div class="content-row w-full py-6 flex flex-col items-center gap-4" id="categories-list">
+      <%= render partial: 'partials/category', collection: @categories %>
+    </div>
+  </div>
+</section>
