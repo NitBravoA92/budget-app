@@ -1,0 +1,22 @@
+<section class="w-full h-screen bg-zinc-200 flex flex-col justify-between" id="new-category">
+  <div class="container mx-auto h-full flex flex-col">
+    <div class="content-row w-full mt-4 py-6 pl-4 flex flex-col items-center gap-4 bg-white">
+      <%= form_with(model: @category, url: categories_path) do |f| %>
+        <div class="form-fields-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, required: true, class: 'form-field' %>
+        </div>
+
+        <div class="form-fields-group">
+          <%= f.label :icon %>
+          <%= f.file_field :icon, required: true, class: 'form-field' %>
+        </div>
+    
+        <div class="actions">
+          <%= f.submit "Save" %>
+          <%= link_to 'Cancel', categories_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
