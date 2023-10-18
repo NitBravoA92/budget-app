@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :payment_category do
+  factory :category_payment do
     category
     payment
   end
