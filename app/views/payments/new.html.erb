@@ -1,0 +1,26 @@
+<section class="w-full h-screen bg-zinc-200 flex flex-col justify-between" id="new-category">
+  <div class="container mx-auto h-full flex flex-col">
+    <div class="content-row w-full mt-4 py-6 pl-4 flex flex-col items-center gap-4 bg-white">
+      <%= form_with(model: @payment, url: payments_path) do |f| %>
+        <div class="">
+          <%= f.label 'Select the category' %>
+          <%= f.collection_select(:category_id, @categories, :id, :name, {required: true}, {class: ''}) %>
+        </div>
+
+        <div class="">
+          <%= f.label :name %>
+          <%= f.text_field :name, required: true %>
+        </div>
+
+        <div class="">
+          <%= f.label 'Amount' %>
+          <%= f.number_field :amount, min: 0.01, step: 0.01, required: true %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Save" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
