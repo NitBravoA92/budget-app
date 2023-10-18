@@ -1,0 +1,16 @@
+<div class="category bg-white w-full flex justify-between gap-1 p-2 text-sm sm:text-md md:text-xl lg:text-3xl text-text_color shadow-md">
+  <div class="category-icon w-1/5">
+    <%= image_tag category.icon, class: 'w-full' %>
+  </div>
+  <div class="category-content w-4/5 h-full flex gap-1 justify-between pt-2 sm:pt-3 md:pt-5 lg:pt-8">
+    <div class="category-name w-2/3 h-full flex flex-col justify-between">
+      <h3 class="font-normal text-zinc-500"><%= category.name %></h3>
+      <p class="text-[0.65rem] sm:text-sm md:text-md lg:text-lg text-text_color text-opacity-40">
+        <%= category.created_at.strftime('%d %b %Y') %>
+      </p>
+    </div>
+    <div class="category-total-amount w-1/3">
+      <p class="font-bold text-right">$<%= category.total_amount.to_f.round(2) %></p>
+    </div>
+  </div>
+</div>
