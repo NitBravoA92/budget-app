@@ -1,6 +1,6 @@
 module ApplicationHelper
   def generate_arrow
-    '<svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path fill="white" d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>'
+    '<svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path fill="white" d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>'
   end
 
   def generate_navigation
@@ -10,14 +10,14 @@ module ApplicationHelper
 
     navbar = "<nav class='w-full bg-main-700'>
       <div class='container mx-auto py-4 px-4'>
-        <ul class='w-full flex justify-between items-center gap-2 text-lg'>
+        <ul class='w-full flex justify-between items-center gap-2'>
           <li class='w-1/6 text-white'>
             #{generate_navbar_data['back'] unless generate_navbar_data.nil?}
           </li>
-          <li class='w-3/6 text-white text-semibold uppercase text-center'>
+          <li class='w-3/6 text-white text-semibold uppercase text-center text-xl'>
             #{generate_navbar_data['title'] unless generate_navbar_data.nil?}
           </li>
-          <li class='w-2/6 text-white text-right'>#{sign_out}</li>
+          <li class='w-2/6 text-white text-right text-lg'>#{sign_out}</li>
         </ul>
       </div>
     </nav>"
