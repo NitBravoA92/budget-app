@@ -8,7 +8,7 @@ module ApplicationHelper
     return if controller_name == 'welcome_pages'
     sign_out = user_signed_in? ? "#{link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete } }" : ''
 
-    navbar = "<nav class='w-full bg-main-700'>
+    navbar = "<nav class='w-full bg-main-700 fixed top-0 left-0 right-0 z-10'>
       <div class='container mx-auto py-4 px-4'>
         <ul class='w-full flex justify-between items-center gap-2'>
           <li class='w-1/6 text-white'>
