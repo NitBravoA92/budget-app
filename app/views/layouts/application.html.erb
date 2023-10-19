@@ -12,13 +12,14 @@
   </head>
 
   <body class="relative">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
     <% if user_signed_in? %>
       <%= render partial: 'partials/navbar' %>
     <% end %>
 
-    <main><%= yield %></main>
+    <main class="bg-zinc-100 pt-16">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </main>
   </body>
 </html>
