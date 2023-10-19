@@ -6,7 +6,7 @@ class Category < ApplicationRecord
   validates :name, :icon, presence: true
   validates :name, length: { maximum: 255 }
 
-  #methods
+  # methods
   def total_amount
     payments.sum(:amount)
   end

@@ -1,7 +1,9 @@
 class PaymentsController < ApplicationController
   before_action :authenticate_user!, only: %i[index]
   def index
-    @payments = current_user.payments.includes(:categories).where(categories: { id:  params[:category_id] }).order(created_at: :desc)
+    @user_payments = current_user.payments
+    @unsorted_payments = @user_payments.includes(:categories).where(categories: { id: params[:category_id] })
+    @payments = @unsorted_payments.order(created_at: :desc)
     @total_amount = @payments.sum(:amount)
   end
 
@@ -12,12 +14,12 @@ class PaymentsController < ApplicationController
 
   def create
     @payment = current_user.payments.create(params_payment)
-    unless @payment.id.nil?
+    if @payment.id.nil?
+      render :new
+    else
       @category = Category.find(params[:payment][:category_id].to_i)
       CategoryPayment.create(category: @category, payment: @payment)
       redirect_to category_payments_path(@payment.id), notice: 'Payment was successfully created.'
-    else
-      render :new
     end
   end
 
