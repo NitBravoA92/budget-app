@@ -17,8 +17,12 @@
     <% end %>
 
     <main class="bg-zinc-100 pt-16">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <% if notice %>
+        <p class="notice mx-2 p-2 text-center bg-secondary text-white font-semibold rounded-md shadow-lg"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert mx-2 p-2 text-center bg-red-800 text-white font-semibold rounded-md shadow-lg"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </main>
   </body>
