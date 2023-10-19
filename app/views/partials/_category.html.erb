@@ -1,9 +1,9 @@
 <div class="category w-full">
   <%= link_to category_payments_path(category), class: 'bg-white w-full h-full flex justify-between gap-2 py-2 pl-2 pr-3 text-sm sm:text-md md:text-xl lg:text-3xl text-text_color shadow-md transition-all duration-300 ease-out hover:-translate-y-1' do %>
-    <div class="category-icon w-1/5">
-      <%= image_tag category.icon, class: 'w-full' %>
+    <div class="category-icon w-[25%]">
+      <%= image_tag category.icon, class: 'w-full h-20' %>
     </div>
-    <div class="category-content w-4/5 h-full flex gap-1 justify-between pt-3 md:pt-5 lg:pt-8">
+    <div class="category-content w-[75%] h-full flex gap-1 justify-between pt-3 md:pt-5 lg:pt-8">
       <div class="category-name w-2/3 h-full flex flex-col justify-between">
         <h3 class="font-normal text-text_color"><%= category.name %></h3>
         <p class="text-[0.75rem] sm:text-sm md:text-md lg:text-lg text-text_color text-opacity-50">
