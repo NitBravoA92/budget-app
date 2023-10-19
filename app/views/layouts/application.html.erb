@@ -14,7 +14,11 @@
   <body class="relative">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render partial: 'partials/navbar' %>
+
+    <% if user_signed_in? %>
+      <%= render partial: 'partials/navbar' %>
+    <% end %>
+
     <main><%= yield %></main>
   </body>
 </html>
