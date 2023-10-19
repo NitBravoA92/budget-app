@@ -75,7 +75,7 @@ module ApplicationHelper
         },
         'new' => {
           'back' => "#{link_to icon, categories_path }",
-          'title' => 'NEW CATEGORY'
+          'title' => 'ADD CATEGORY'
         }
       },
       'payments' => {
