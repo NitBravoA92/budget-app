@@ -70,7 +70,7 @@ module ApplicationHelper
     authenticated_data = {
       'categories' => {
         'index' => {
-          'back' => "#{link_to icon, categories_path }",
+          'back' => "",
           'title' => 'CATEGORIES'
         },
         'new' => {
@@ -81,11 +81,11 @@ module ApplicationHelper
       'payments' => {
         'index' => {
           'back' => "#{link_to icon, categories_path }",
-          'title' => 'TRANSACTIONS'
+          'title' => 'PAYMENTS'
         },
         'new' => {
           'back' => "#{link_to icon, :back }",
-          'title' => 'NEW TRANSACTION'
+          'title' => 'ADD PAYMENT'
         }
       },
     }
