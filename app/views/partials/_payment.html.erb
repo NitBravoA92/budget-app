@@ -3,7 +3,7 @@
     <div class="payment-name w-2/3 h-full flex flex-col justify-between">
       <h3 class="font-normal text-text_color pb-6"><%= payment.name %></h3>
       <p class="text-[0.75rem] sm:text-sm md:text-md lg:text-lg text-text_color text-opacity-50">
-        <%= time_ago_in_words(payment.created_at) %>
+        <%= payment.created_at.strftime('%d %b %Y') %>
       </p>
     </div>
     <div class="payment-amount w-1/3">
