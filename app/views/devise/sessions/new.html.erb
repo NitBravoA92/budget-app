@@ -3,6 +3,8 @@
     <div class="content-row w-full">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
+        <%= generate_auth_navigation(f) %>
+
         <div class="w-full mt-4 pl-4 flex flex-col items-center bg-white border-y-2 border-zinc-300">
           <div class="w-full border-b-2 border-zinc-300">
             <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", placeholder: 'Email', class: 'w-full border-none py-4 pr-1 text-text_color' %>
@@ -11,10 +13,6 @@
           <div class="w-full border-zinc-300">
             <%= f.password_field :password, required: true, autocomplete: "current-password", placeholder: 'Password', class: 'w-full border-none py-4 pr-1 text-text_color' %>
           </div>
-        </div>
-
-        <div class="w-full mt-4 p-4">
-          <%= f.submit "Log in", class: 'w-full p-5 inline-block bg-main-400 text-white text-center uppercase transition-colors duration-300 ease-in-out hover:bg-main-700' %>
         </div>
 
         <div class="w-full mt-4 p-4 text-center text-text_color opacity-70">
