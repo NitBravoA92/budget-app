@@ -1,26 +1,26 @@
-<h2>Log in</h2>
+<section class="pt-16 w-full h-screen bg-zinc-100 flex flex-col justify-between" id="log-in">
+  <div class="container mx-auto h-full flex flex-col">
+    <div class="content-row w-full">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+        <div class="w-full mt-4 pl-4 flex flex-col items-center bg-white border-y-2 border-zinc-300">
+          <div class="w-full border-b-2 border-zinc-300">
+            <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", placeholder: 'Email', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+          <div class="w-full border-zinc-300">
+            <%= f.password_field :password, required: true, autocomplete: "current-password", placeholder: 'Password', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+          </div>
+        </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <div class="w-full mt-4 p-4">
+          <%= f.submit "Log in", class: 'w-full p-5 inline-block bg-main-400 text-white text-center uppercase transition-colors duration-300 ease-in-out hover:bg-main-700' %>
+        </div>
+
+        <div class="w-full mt-4 p-4 text-center text-text_color opacity-70">
+          <%= render "devise/shared/links" %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>
