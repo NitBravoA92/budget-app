@@ -1,9 +1,9 @@
-<div class="payment bg-white w-full flex justify-between gap-1 p-2 text-sm sm:text-md md:text-xl lg:text-3xl text-text_color shadow-md">
+<div class="payment bg-white w-full flex justify-between gap-1 py-2 px-3 text-sm sm:text-md md:text-xl lg:text-3xl text-text_color shadow-md transition-all duration-300 ease-out hover:-translate-y-1">
   <div class="payment-content w-full h-full flex gap-1 justify-between pt-2">
     <div class="payment-name w-2/3 h-full flex flex-col justify-between">
-      <h3 class="font-normal text-zinc-500 pb-8"><%= payment.name %></h3>
-      <p class="text-[0.65rem] sm:text-sm md:text-md lg:text-lg text-text_color text-opacity-40">
-        <%= payment.created_at.strftime('%d %b %Y') %>
+      <h3 class="font-normal text-text_color pb-6"><%= payment.name %></h3>
+      <p class="text-[0.75rem] sm:text-sm md:text-md lg:text-lg text-text_color text-opacity-50">
+        <%= time_ago_in_words(payment.created_at) %>
       </p>
     </div>
     <div class="payment-amount w-1/3">
