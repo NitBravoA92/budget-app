@@ -1,6 +1,6 @@
 <section class="w-full h-screen bg-zinc-100 flex flex-col" id="payments">
   <% unless @payments.length == 0 %>
-    <div class="container mx-auto w-full">
+    <div class="w-full">
       <div class="content-row w-full bg-white border-b-2 border-zinc-300 py-7 px-4 text-lg flex justify-between items-center gap-2">
         <h3 class="font-normal text-zinc-500"><%= @payments[0].categories.first.name %></h3>
         <p class="font-bold text-right">$<%= @total_amount %></p>
@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div class="full-button w-full fixed bottom-0 left-0 right-0 p-4 bg-secondary transition-opacity duration-300 ease-in-out hover:opacity-80">
-    <%= link_to 'Add a new transaction', new_payment_path, class: 'w-full inline-block p-3 border-2 border-white opacity-100 text-white text-center uppercase' %>
+  <div class="full-button w-full fixed bottom-0 left-0 right-0 p-4 bg-secondary">
+    <%= link_to 'Add a new transaction', new_payment_path, class: 'w-full inline-block p-3 border-2 border-white opacity-100 text-white text-center uppercase transition-colors duration-300 ease-in-out hover:bg-white hover:text-secondary' %>
   </div>
 </section>
