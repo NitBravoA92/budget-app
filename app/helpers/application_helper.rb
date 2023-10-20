@@ -17,10 +17,10 @@ module ApplicationHelper
             <li class='w-1/6 text-white'>
               #{data['back'] unless data.nil?}
             </li>
-            <li class='w-3/6 text-white text-semibold uppercase text-center text-xl'>
+            <li class='w-3/6 text-white text-semibold uppercase text-center text-2xl'>
               #{data['title'] unless data.nil?}
             </li>
-            <li class='w-2/6 text-white text-right text-lg'>
+            <li class='w-2/6 text-white text-right text-xl'>
               #{link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }}
             </li>
           </ul>
@@ -34,14 +34,14 @@ module ApplicationHelper
     content = "<nav class='w-full bg-main-700 fixed top-0 left-0 right-0 z-10'>
       <div class='container mx-auto py-4 px-4'>
         <ul class='w-full flex justify-between items-center gap-2'>
-          <li class='w-1/6 text-white'>
+          <li class='w-2/12 text-white'>
             #{data['back'] unless data.nil?}
           </li>
-          <li class='w-3/6 text-white text-semibold uppercase text-center text-xl'>
+          <li class='w-7/12 text-white text-semibold uppercase text-center text-2xl'>
             #{data['title'] unless data.nil?}
           </li>
-          <li class='w-2/6 text-white text-right text-lg'>
-            #{form.submit data['right']}
+          <li class='w-3/12 text-white text-right text-xl'>
+            #{form.submit data['right'], class: 'text-xl'}
           </li>
         </ul>
       </div>

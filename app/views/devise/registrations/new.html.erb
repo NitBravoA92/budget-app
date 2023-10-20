@@ -1,4 +1,4 @@
-<section class="w-full h-screen bg-zinc-100 flex flex-col justify-between" id="sign-up">
+<section class="w-full h-full bg-zinc-100 flex flex-col justify-between" id="sign-up">
   <div class="container mx-auto h-full flex flex-col">
     <div class="content-row w-full">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -8,22 +8,22 @@
 
         <div class="w-full mt-4 pl-4 flex flex-col items-center bg-white border-y-2 border-zinc-300">
           <div class="w-full border-b-2 border-zinc-300">
-            <%= f.text_field :name, autocomplete: "name", autofocus: true, required: true, placeholder: 'Name', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.text_field :name, autocomplete: "name", autofocus: true, required: true, placeholder: 'Name', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
 
           <div class="w-full border-b-2 border-zinc-300">
-            <%= f.email_field :email, required: true, autocomplete: "email", placeholder: 'Email', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.email_field :email, required: true, autocomplete: "email", placeholder: 'Email', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
 
           <div class="w-full border-b-2 border-zinc-300">
-            <%= f.password_field :password, autocomplete: "new-password", required: true, placeholder: 'Password', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.password_field :password, autocomplete: "new-password", required: true, placeholder: 'Password', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
             <% if @minimum_password_length %>
               <em class="text-text_color opacity-50">(<%= @minimum_password_length %> characters minimum)</em>
             <% end %>
           </div>
 
           <div class="w-full">
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, placeholder: 'Confirm password', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, placeholder: 'Confirm password', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
         </div>
       <% end %>

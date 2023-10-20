@@ -1,19 +1,19 @@
-<section class="w-full h-screen bg-zinc-100 flex flex-col justify-between" id="new-category">
+<section class="w-full h-full bg-zinc-100 flex flex-col justify-between" id="new-category">
   <div class="container mx-auto h-full flex flex-col">
     <div class="content-row w-full">
       <%= form_with(model: @category, url: categories_path) do |f| %>
 
         <div class="w-full mt-4 pl-4 flex flex-col items-center bg-white border-y-2 border-zinc-300">
           <div class="w-full border-b-2 border-zinc-300">
-            <%= f.text_field :name, required: true, placeholder: 'Name', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.text_field :name, required: true, placeholder: 'Name', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
           <div class="w-full">
-            <%= f.file_field :icon, required: true, placeholder: 'Icon', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.file_field :icon, required: true, placeholder: 'Icon', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
         </div>
 
         <div class="w-full mt-4 p-4">
-          <%= f.submit "Save", class: 'w-full p-5 inline-block bg-main-400 text-white text-center uppercase transition-colors duration-300 ease-in-out hover:bg-main-700' %>
+          <%= f.submit "Save", class: 'w-full p-4 text-2xl inline-block bg-main-400 text-white text-center uppercase transition-colors duration-300 ease-in-out hover:bg-main-700' %>
         </div>
       <% end %>
     </div>

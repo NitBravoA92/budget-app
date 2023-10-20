@@ -11,7 +11,7 @@ module PagesLinks
       'passwords' => {
         'new' => {
           'back' => link_to(icon, new_user_session_path, class: 'back_button').to_s,
-          'title' => 'FORGOT YOUR PASSWORD',
+          'title' => 'FORGOT PASSWORD',
           'right' => 'Reset'
         },
         'edit' => {

@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Proxima Nova Condensed', ...defaultTheme.fontFamily.sans],
         pacific: ['Pacifico', 'cursive'],
       },
       colors: {
@@ -23,6 +23,15 @@ module.exports = {
         },
         'secondary': '#5fb523',
         'text_color': '#434b54',
+      },
+      keyframes: {
+        hideElement: {
+          '0%': { display: 'block' },
+          '100%': { display: 'none' },
+        },
+      },
+      animation: {
+        'fade-out': 'hideElement 0s ease-out 3s forwards',
       },
     },
   },

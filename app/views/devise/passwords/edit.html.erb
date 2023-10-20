@@ -1,4 +1,4 @@
-<section class="w-full h-screen bg-zinc-100 flex flex-col justify-between" id="change-password">
+<section class="w-full h-full bg-zinc-100 flex flex-col justify-between" id="change-password">
   <div class="container mx-auto h-full flex flex-col">
     <div class="content-row w-full">
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
@@ -11,14 +11,14 @@
 
         <div class="w-full mt-4 pl-4 flex flex-col items-center bg-white border-y-2 border-zinc-300">
           <div class="w-full border-b-2 border-zinc-300">
-            <%= f.password_field :password, autofocus: true, required: true, autocomplete: "new-password", placeholder: 'New password', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.password_field :password, autofocus: true, required: true, autocomplete: "new-password", placeholder: 'New password', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
             <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em><br />
             <% end %>
           </div>
 
           <div class="w-full border-b-2 border-zinc-300">
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, placeholder: 'Confirm new password', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, placeholder: 'Confirm new password', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
         </div>
 

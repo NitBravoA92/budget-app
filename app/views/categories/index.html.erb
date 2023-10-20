@@ -1,11 +1,11 @@
-<section class="relative w-full h-screen bg-zinc-100 flex flex-col justify-between" id="categories">
-  <div class="container mx-auto h-[80%] flex flex-col px-2">
+<section class="relative w-full h-full bg-zinc-100 flex flex-col justify-between" id="categories">
+  <div class="container mx-auto h-[89%] overflow-scroll flex flex-col px-2">
     <div class="content-row w-full pb-6 pt-4 flex flex-col items-center gap-4" id="categories-list">
       <%= render partial: 'partials/category', collection: @categories %>
     </div>
   </div>
 
   <div class="full-button w-full fixed bottom-0 left-0 right-0 p-4 bg-secondary">
-    <%= link_to 'Add a new category', new_category_path, class: 'w-full inline-block p-3 border-2 border-white opacity-100 text-white text-center uppercase transition-colors duration-300 ease-in-out hover:bg-white hover:text-secondary' %>
+    <%= link_to 'Add a new category', new_category_path, class: 'w-full inline-block p-3 border-2 border-white text-xl opacity-100 text-white text-center uppercase transition-colors duration-300 ease-in-out hover:bg-white hover:text-secondary' %>
   </div>
 </section>

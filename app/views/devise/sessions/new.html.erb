@@ -1,4 +1,4 @@
-<section class="w-full h-screen bg-zinc-100 flex flex-col justify-between" id="log-in">
+<section class="w-full h-full bg-zinc-100 flex flex-col justify-between" id="log-in">
   <div class="container mx-auto h-full flex flex-col">
     <div class="content-row w-full">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -7,11 +7,11 @@
 
         <div class="w-full mt-4 pl-4 flex flex-col items-center bg-white border-y-2 border-zinc-300">
           <div class="w-full border-b-2 border-zinc-300">
-            <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", placeholder: 'Email', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", placeholder: 'Email', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
 
           <div class="w-full border-zinc-300">
-            <%= f.password_field :password, required: true, autocomplete: "current-password", placeholder: 'Password', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.password_field :password, required: true, autocomplete: "current-password", placeholder: 'Password', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
         </div>
 

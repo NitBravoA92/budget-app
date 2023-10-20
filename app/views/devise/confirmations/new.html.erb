@@ -1,4 +1,4 @@
-<section class="w-full h-screen bg-zinc-100 flex flex-col justify-between" id="resent-confirmation">
+<section class="w-full h-full bg-zinc-100 flex flex-col justify-between" id="resent-confirmation">
   <div class="container mx-auto h-full flex flex-col">
     <div class="content-row w-full">
       <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -9,7 +9,7 @@
 
         <div class="w-full mt-4 pl-4 flex flex-col items-center bg-white border-y-2 border-zinc-300">
           <div class="w-full">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), required: true, placeholder: 'Email', class: 'w-full border-none py-4 pr-1 text-text_color' %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), required: true, placeholder: 'Email', class: 'w-full border-none py-4 pr-1 text-text_color text-xl placeholder:text-xl' %>
           </div>
         </div>
 
