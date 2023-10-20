@@ -14,6 +14,8 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [🚀 Live Demo ](#-live-demo-)
+  - [🔭 Walk through video ](#-walk-through-video-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -87,6 +89,21 @@
 
 ---
 
+### 🚀 Live Demo <a name="live-demo"></a>
+
+To see the application working live, you can click on the following link that contains the demo version:
+
+- [YouPayment App - Live Demo](https://budget-app-v4rw.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🔭 Walk through video <a name="walk-through-video"></a>
+
+<a href="https://drive.google.com/file/d/1KPfffq3RFb_OBnaozjq6VrXX-hGTFtcD/view?usp=sharing">Video presentation of the Project</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -98,11 +115,16 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 <ul>
-    <li><p>A code editor (we recommend Visual Studio Code)</p></li>
+    <li><p>**A code editor** like Visual Studio Code (Recommended) or any other of your preference. It is necessary to open the project and add or modify the source code. [You can Download Visual Studio Code here](https://code.visualstudio.com/)</p></li>
 </ul>
 
 <ul>
-    <li><p>Git and a GitHub account</p></li>
+    <li><p>**Git:** to manage the project versions of source code. [You can Download Git here](https://git-scm.com/)</p></li>
+</ul>
+
+<ul>
+    <li><p>**Nodejs and NPM:** to install and manage the node packages. [Nodejs and NPM installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+</p></li>
 </ul>
 
 ### Setup
@@ -137,7 +159,12 @@ Once you have verified that you have Ruby on Rails installed, run the following 
  bundle install
 ```
 
-After installing the gems, run the following command to create the database:
+Then run the following command to install the necessary Node packages:
+```
+ npm install
+```
+
+After installing the gems and packages, run the following command to create the database:
 
 ```
  rails db:create
@@ -209,7 +236,7 @@ Upcoming improvements:
 - [x] Add the functionality to list categories and payments
 - [x] Add the integration tests using capybara gem
 - [x] Create the CSS styles for the app
-- [ ] Deploy the application
+- [x] Deploy the application
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -222,6 +249,8 @@ Upcoming improvements:
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/NitBravoA92/budget-app/issues).
+
+To do Contributions, please fork this repository, create a new branch and then create a Pull Request from your branch. You can find detailed description of this process in: [A Step by Step Guide to Making Your First GitHub Contribution by Brandon Morelli](https://codeburst.io/a-step-by-step-guide-to-making-your-first-github-contribution-5302260a2940)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,7 +271,9 @@ Or give it a **star** ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I thank Microverse for this fantastic opportunity, and the code reviewers for their advice and time.
+The UI design of this webapp is not mine. This design was created and belongs to Gregoire Vella. (Here)[https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=] you can find more information about the original design of this mobile app and you can also see Gregoire Vella's profile (here)[https://www.behance.net/gregoirevella] to know more details about his wonderful work.
+
+I would also like to thank my Microverse teammates for their support. They have supported me a lot in carrying out this project, giving me suggestions, good advice and solving my code doubts.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -253,6 +284,8 @@ I thank Microverse for this fantastic opportunity, and the code reviewers for th
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+The UI design of the webpage is not mine. It is under (Creative Commons License)[https://creativecommons.org/licenses/by-nc/4.0/] licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
