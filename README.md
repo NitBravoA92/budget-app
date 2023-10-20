@@ -178,7 +178,7 @@ To verify that the ruby and CSS code is written without errors and meets good pr
 To execute the tests, run the following command inside the project folder:
 
 ```
- rspec
+  bundle exec rspec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -205,10 +205,11 @@ To execute the tests, run the following command inside the project folder:
 
 Upcoming improvements:
 
-- [ ] Add Forms to create a new category and payment
-- [ ] Add the functionality to list categories and payments
-- [ ] Add the integration tests using capybara gem
-- [ ] Create the CSS styles for the app
+- [x] Add Forms to create a new category and payment
+- [x] Add the functionality to list categories and payments
+- [x] Add the integration tests using capybara gem
+- [x] Create the CSS styles for the app
+- [ ] Deploy the application
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
