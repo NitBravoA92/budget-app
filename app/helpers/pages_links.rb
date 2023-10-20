@@ -3,33 +3,33 @@ module PagesLinks
     {
       'sessions' => {
         'new' => {
-          'back' => link_to(icon, root_path).to_s,
+          'back' => link_to(icon, root_path, class: 'back_button').to_s,
           'title' => 'LOG IN',
           'right' => 'Log in'
         }
       },
       'passwords' => {
         'new' => {
-          'back' => link_to(icon, new_user_session_path).to_s,
+          'back' => link_to(icon, new_user_session_path, class: 'back_button').to_s,
           'title' => 'FORGOT YOUR PASSWORD',
           'right' => 'Reset'
         },
         'edit' => {
-          'back' => link_to(icon, new_user_session_path).to_s,
+          'back' => link_to(icon, new_user_session_path, class: 'back_button').to_s,
           'title' => 'CHANGE YOUR PASSWORD',
           'right' => 'Save'
         }
       },
       'confirmations' => {
         'new' => {
-          'back' => link_to(icon, new_user_session_path).to_s,
+          'back' => link_to(icon, new_user_session_path, class: 'back_button').to_s,
           'title' => 'RESEND CONFIRMATION',
           'right' => 'Resent'
         }
       },
       'registrations' => {
         'new' => {
-          'back' => link_to(icon, root_path).to_s,
+          'back' => link_to(icon, root_path, class: 'back_button').to_s,
           'title' => 'SIGN UP',
           'right' => 'Next'
         }
@@ -45,17 +45,17 @@ module PagesLinks
           'title' => 'CATEGORIES'
         },
         'new' => {
-          'back' => link_to(icon, categories_path).to_s,
+          'back' => link_to(icon, categories_path, class: 'back_button').to_s,
           'title' => 'ADD CATEGORY'
         }
       },
       'payments' => {
         'index' => {
-          'back' => link_to(icon, categories_path).to_s,
+          'back' => link_to(icon, categories_path, class: 'back_button').to_s,
           'title' => 'PAYMENTS'
         },
         'new' => {
-          'back' => link_to(icon, :back).to_s,
+          'back' => link_to(icon, :back, class: 'back_button').to_s,
           'title' => 'ADD PAYMENT'
         }
       }
