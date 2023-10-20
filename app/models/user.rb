@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :confirmable
 
   has_many :categories
-  has_many :payments
+  has_many :payments, class_name: 'Payment', foreign_key: 'author_id'
 
   validates :name, presence: true
 end

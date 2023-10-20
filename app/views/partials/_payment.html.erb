@@ -1,0 +1,13 @@
+<div class="payment bg-white w-full md:w-5/6 flex justify-between gap-1 py-2 px-3 text-lg sm:text-xl md:text-3xl lg:text-5xl text-text_color shadow-md transition-all duration-300 ease-out hover:-translate-y-1">
+  <div class="payment-content w-full h-full flex gap-1 justify-between pt-2">
+    <div class="payment-name w-2/3 h-full flex flex-col justify-between">
+      <h3 class="font-normal text-text_color pb-6"><%= payment.name %></h3>
+      <p class="text-[0.85rem] sm:text-md md:text-lg lg:text-xl text-text_color text-opacity-50">
+        <%= payment.created_at.strftime('%d %b %Y') %>
+      </p>
+    </div>
+    <div class="payment-amount w-1/3">
+      <p class="font-bold text-right">$<%= payment.amount.to_f.round(2) %></p>
+    </div>
+  </div>
+</div>

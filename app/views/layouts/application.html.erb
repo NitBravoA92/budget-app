@@ -11,12 +11,19 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="relative h-screen">
     <% if user_signed_in? %>
-      <%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete } %>
+      <%= render partial: 'partials/navbar' %>
     <% end %>
-    <%= yield %>
+
+    <main class="bg-zinc-100 pt-16 h-full">
+      <% if notice %>
+        <p class="notice animate-fade-out text-2xl mx-2 p-2 text-center bg-secondary text-white font-semibold rounded-md shadow-lg"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert animate-fade-out text-2xl mx-2 p-2 text-center bg-red-800 text-white font-semibold rounded-md shadow-lg"><%= alert %></p>
+      <% end %>
+      <%= yield %>
+    </main>
   </body>
 </html>
