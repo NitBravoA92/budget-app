@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="relative h-screen">
+    <% if user_signed_in? %>
+      <%= render partial: 'partials/navbar' %>
+    <% end %>
+
+    <main class="bg-zinc-100 pt-16 h-full">
+      <% if notice %>
+        <p class="notice animate-fade-out text-2xl mx-2 p-2 text-center bg-secondary text-white font-semibold rounded-md shadow-lg"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert animate-fade-out text-2xl mx-2 p-2 text-center bg-red-800 text-white font-semibold rounded-md shadow-lg"><%= alert %></p>
+      <% end %>
+      <%= yield %>
+    </main>
+  </body>
+</html>
