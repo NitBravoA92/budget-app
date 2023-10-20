@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    id { rand(1..100_000) }
+    id { rand(1..400_000) }
     name { 'James Williams' }
     email { "james_#{id}@mail.com" }
     password { 'james12345' }

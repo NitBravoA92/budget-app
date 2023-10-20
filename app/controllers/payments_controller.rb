@@ -19,7 +19,7 @@ class PaymentsController < ApplicationController
     else
       @category = Category.find(params[:payment][:category_id].to_i)
       CategoryPayment.create(category: @category, payment: @payment)
-      redirect_to category_payments_path(@payment.id), notice: 'Payment was successfully created.'
+      redirect_to category_payments_path(@category), notice: 'Payment was successfully created.'
     end
   end
 
