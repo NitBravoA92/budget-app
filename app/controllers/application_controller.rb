@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  #redirect to categories page when user is logged in
+  # redirect to categories page when user is logged in
   def after_sign_in_path_for(_resource)
     categories_path
   end

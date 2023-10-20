@@ -17,7 +17,7 @@ describe "Visit the new page of 'payments'", type: :feature do
     expect(page).to have_content 'Sign Out'
   end
 
-  it "should display the form to add a new payment" do
+  it 'should display the form to add a new payment' do
     visit new_payment_path
 
     expect(page).to have_selector('form')

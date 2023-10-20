@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Visit the SplashScreen page", type: :feature do
+describe 'Visit the SplashScreen page', type: :feature do
   it 'should display the title of the page' do
     visit root_path
     expect(page).to have_content 'YouPayment'

@@ -24,7 +24,7 @@ describe "Visit the index page of 'categories'", type: :feature do
     expect(page).to have_content 'Sign Out'
   end
 
-  it "should display the list of category items" do
+  it 'should display the list of category items' do
     visit categories_path
     expect(page).to have_css('.category')
     expect(page).to have_css('img')
@@ -45,7 +45,7 @@ describe "Visit the index page of 'categories'", type: :feature do
     expect(page).to have_current_path(root_path)
   end
 
-  it "Clicking on the a category item should redirect to the payments page" do
+  it 'Clicking on the a category item should redirect to the payments page' do
     visit categories_path
     click_link 'Category 1'
     expect(page).to have_current_path(category_payments_path(@category))

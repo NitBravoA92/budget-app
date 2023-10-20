@@ -17,7 +17,7 @@ describe "Visit the new page of 'categories'", type: :feature do
     expect(page).to have_content 'Sign Out'
   end
 
-  it "should display the form to add a new category" do
+  it 'should display the form to add a new category' do
     visit new_category_path
 
     expect(page).to have_selector('form')
@@ -26,7 +26,7 @@ describe "Visit the new page of 'categories'", type: :feature do
     expect(page).to have_css('input[type="submit"]')
   end
 
-  it "Clicking on the back button (left arrow) should redirect to categories page" do
+  it 'Clicking on the back button (left arrow) should redirect to categories page' do
     visit new_category_path
     click_on(class: 'back_button')
     expect(page).to have_current_path(categories_path)

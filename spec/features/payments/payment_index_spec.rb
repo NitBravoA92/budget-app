@@ -5,7 +5,7 @@ describe "Visit the index page of 'Payments'", type: :feature do
     user = FactoryBot.create(:user)
     @category = FactoryBot.create(:category, user:)
     payment = FactoryBot.create(:payment, author: user)
-    CategoryPayment.create(category: @category, payment: payment)
+    CategoryPayment.create(category: @category, payment:)
 
     login_as(user)
   end
@@ -27,7 +27,7 @@ describe "Visit the index page of 'Payments'", type: :feature do
     expect(page).to have_content 'Sign Out'
   end
 
-  it "should display the name and total amount of the current category" do
+  it 'should display the name and total amount of the current category' do
     visit category_payments_path(@category)
 
     expected_category_name = @category.name
@@ -37,7 +37,7 @@ describe "Visit the index page of 'Payments'", type: :feature do
     expect(page).to have_content expected_total_amount
   end
 
-  it "should display the list of payments items by a category" do
+  it 'should display the list of payments items by a category' do
     visit category_payments_path(@category)
     expect(page).to have_css('.payment')
     expect(page).to have_content 'Purchase of Burger King burger'
@@ -53,7 +53,7 @@ describe "Visit the index page of 'Payments'", type: :feature do
     expect(page).to have_current_path(new_payment_path)
   end
 
-  it "Clicking on the back button (left arrow) should redirect to categories page" do
+  it 'Clicking on the back button (left arrow) should redirect to categories page' do
     visit category_payments_path(@category)
     click_on(class: 'back_button')
     expect(page).to have_current_path(categories_path)

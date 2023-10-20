@@ -30,7 +30,6 @@ RSpec.describe 'Categories', type: :request do
     end
   end
 
-
   # request to: /categories/new
   describe 'GET /new' do
     before do

@@ -7,7 +7,7 @@ RSpec.describe 'Payments', type: :request do
       user = FactoryBot.create(:user)
       category = FactoryBot.create(:category, user:)
       payment = FactoryBot.create(:payment, author: user)
-      CategoryPayment.create(category: category, payment: payment)
+      CategoryPayment.create(category:, payment:)
 
       sign_in user
       get category_payments_path(category)
