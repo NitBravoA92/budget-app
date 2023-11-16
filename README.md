@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b>YouPayment | Budget App</b></h1>
+  <h1><b>YouPayment | Ruby on Rails capstone project</b></h1>
   <img src="app/assets/images/app-logo.png" width="200px" height="200px">
 </div>
 
